@@ -30,7 +30,13 @@ gpg --verify openresty-<version>.tar.gz.asc openresty-<version>.tar.gz
 shasum -a 256 openresty-<version>.tar.gz   # compare with the release notes
 ```
 
-The signing key's fingerprint will be published here alongside the first signed release.
+The signing key is "VeeCode OpenResty Bundle Signing Key" `<openresty@veecode.codes>`, with fingerprint:
+
+```pre
+E818 FA0B 5E48 6143 93FA  D520 C474 277C 1719 50D4
+```
+
+Its public key is [`openresty-bundle.pub.asc`](openresty-bundle.pub.asc) in this repository. Import it with `gpg --import openresty-bundle.pub.asc`, then check that the fingerprint matches before trusting a signature.
 
 ## License
 
